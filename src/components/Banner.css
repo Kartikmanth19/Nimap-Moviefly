@@ -1,0 +1,80 @@
+.Banner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292626;
+  padding: 0.6rem 1.5rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Name {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: coral;
+  margin-left: 60px;
+}
+.Name:hover{
+  color: white;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-left: 500px;
+}
+
+.category a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.category a:hover {
+  color: coral;
+
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 150px;
+}
+
+.searchbar input {
+  padding: 0.3rem 0.6rem;
+  width: 180px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: #121212;
+  background-color: white;
+  height:35px;
+}
+
+.searchbar button {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 80px;
+  height: 35px;
+}
+
+.searchbar button:hover {
+  background-color: chocolate;
+  color: white;
+}

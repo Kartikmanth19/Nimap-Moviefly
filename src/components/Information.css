@@ -1,0 +1,157 @@
+.moviepage {
+  background-color: #111;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+.infodisplay {
+  display: flex;
+  height: 500px;
+  margin-top: 15px;
+  margin-left: 30px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.section1 {
+  width: 50%;
+  display: flex;
+  padding: 2rem;
+  background-color: #0d0d0d;
+  position: relative;
+  z-index: 2;
+}
+
+.section1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0));
+  pointer-events: none;
+  z-index: 3;
+}
+
+.coverpic {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+}
+
+.moviedetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.moviedetail h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  color: #4db8ff;
+  margin-bottom: 0.3rem;
+}
+
+.movietype span {
+  background: #333;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.releasedate {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  color: #ddd;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.section2 {
+  width: 45%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  border-radius:0px 30px 30px 0px ;
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.2), transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.castpage {
+  padding: 2rem;
+}
+
+.castpage h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.square {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.actor {
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  width: 180px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.actor:hover {
+  transform: scale(1.05);
+}
+
+.actor img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.actordetails {
+  padding: 0.5rem;
+}
+
+.actordetails h4 {
+  font-size: 1rem;
+  margin: 0.2rem 0;
+}
+
+.actordetails p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.err {
+  padding: 2rem;
+  color: white;
+  text-align: center;
+} 

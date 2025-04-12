@@ -1,0 +1,82 @@
+.square {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14rem;
+  padding: 2rem;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.grid {
+  background-color:#292626;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  max-width: 250px;
+}
+a {
+  font-weight: 500;
+  color: coral;
+}
+a :hover {
+  color: aliceblue;
+}
+
+.grid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+ 
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #444;
+}
+
+.grid h3 {
+  margin: 0.8rem 0 0.2rem;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+   color: aliceblue;
+}
+.grid h3:hover{
+  color: coral;
+}
+
+.grid p {
+  margin-bottom: 1rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.Nextpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.Nextpage button {
+  background-color: #242424;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.Nextpage button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.Nextpage span {
+  color: white;
+  font-weight: 500;
+}
