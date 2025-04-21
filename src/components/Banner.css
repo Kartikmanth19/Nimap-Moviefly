@@ -19,7 +19,7 @@
   color: coral;
   margin-left: 60px;
 }
-.Name:hover{
+.Name:hover {
   color: white;
 }
 
@@ -40,7 +40,6 @@
 
 .category a:hover {
   color: coral;
-
 }
 
 .searchbar {
@@ -59,7 +58,7 @@
   font-size: 0.9rem;
   color: #121212;
   background-color: white;
-  height:35px;
+  height: 35px;
 }
 
 .searchbar button {
@@ -77,4 +76,78 @@
 .searchbar button:hover {
   background-color: chocolate;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .Banner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .Name {
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  .category {
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .searchbar {
+    margin-right: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .searchbar input {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  .searchbar button {
+    width: auto;
+    padding: 0.3rem 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Name {
+    font-size: 1.4rem;
+  }
+
+  .category a {
+    font-size: 1rem;
+  }
+
+  .searchbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .searchbar input {
+    width: 100%;
+  }
+
+  .searchbar button {
+    width: 100%;
+  }
+}
+@media (max-width: 1280px) {
+  .category {
+    margin-left: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .searchbar {
+    margin-right: 2rem;
+  }
 }

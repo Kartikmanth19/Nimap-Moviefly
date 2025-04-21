@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Banner from "./Banner";
 
 
-const Find = ({ query, setMovie }) => {
+const Find = ({ query, setMovie ,setSearch}) => {
   
   const [movies, setMovies] = useState([]);
   const api = "c45a857c193f6302f2b5061c3b85e743";
@@ -20,9 +21,14 @@ const Find = ({ query, setMovie }) => {
   const handleClick = (movie) => {
     setMovie({ id: movie.id });
 };
-  
+  const handleSearch = (query) => {
+    setSearch(query);
+  };
+
 
   return (
+    <>
+    <Banner setSearch={handleSearch} />
     <div className="square">
       {movies.length > 0 ? (
         movies.map((movie) => (
@@ -37,6 +43,7 @@ const Find = ({ query, setMovie }) => {
         <p style={{ padding: "2rem", color: "white" }}>No results found....</p>
       )}
     </div>
+    </>
   );
 };
 

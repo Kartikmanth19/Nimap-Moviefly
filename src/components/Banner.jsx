@@ -8,7 +8,10 @@ const Banner = ({ setSearch }) => {
   const [query, setQuery] = useState("");
   
 
-  const handleSearch = () => {if (query.trim()) {setSearch(query); navigate("/Find");setQuery("");
+  const handleSearch = () => {
+    if (query.trim()) {
+      setSearch(query);
+      navigate("/Find"); setQuery("");
     }
   };
 

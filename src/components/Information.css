@@ -30,7 +30,6 @@
   right: 0;
   width: 100px;
   height: 100%;
-  background: linear-gradient(to right, rgba(13, 13, 13, 1), rgba(13, 13, 13, 0));
   pointer-events: none;
   z-index: 3;
 }
@@ -76,8 +75,33 @@
 
 .desc {
   color: #ddd;
-  line-height: 1.5;
-  max-width: 90%;
+  line-height: 1.3;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  max-width: 100%;
+  width: 100%;
+  padding: 0 1rem;   
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+  .desc {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desc {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .desc {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
 }
 
 .section2 {
@@ -86,7 +110,7 @@
   background-position: center;
   position: relative;
   z-index: 1;
-  border-radius:0px 30px 30px 0px ;
+  border-radius: 0px 30px 30px 0px;
 }
 
 .section2::before {
@@ -96,7 +120,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(17, 17, 17, 0.6), rgba(17, 17, 17, 0.2), transparent);
   z-index: 0;
   pointer-events: none;
 }
@@ -154,4 +177,103 @@
   padding: 2rem;
   color: white;
   text-align: center;
-} 
+}
+
+@media (max-width: 768px) {
+  .infodisplay {
+    flex-direction: column;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 20px;
+  }
+
+  .section1,
+  .section2 {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coverpic {
+    width: 150px;
+    height: 225px;
+    margin: 0 auto 1rem;
+  }
+
+  .moviedetail h2 {
+    font-size: 1.4rem;
+  }
+
+  .desc {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .section2 {
+    height: 200px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .castpage {
+    padding: 1.5rem 1rem;
+  }
+
+  .square {
+    gap: 1.5rem;
+  }
+
+  .actor {
+    width: 150px;
+  }
+
+  .actor img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coverpic {
+    width: 120px;
+    height: 180px;
+  }
+
+  .moviedetail h2 {
+    font-size: 1.2rem;
+  }
+
+  .movietype span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .section2 {
+    height: 180px;
+  }
+
+  .actor {
+    width: 130px;
+  }
+
+  .actor img {
+    height: 180px;
+  }
+
+  .castpage h3 {
+    font-size: 1.2rem;
+  }
+
+  .actordetails h4 {
+    font-size: 0.9rem;
+  }
+
+  .actordetails p {
+    font-size: 0.8rem;
+  }
+}

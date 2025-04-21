@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Information.css";
+import Banner from "./Banner";
 
 const Information = (props) => {
   const api = "c45a857c193f6302f2b5061c3b85e743";
@@ -20,10 +21,14 @@ const Information = (props) => {
       .then((res) => res.json())
       .then((data) => setCast(data.cast));
   }, [id]);
-
+  const handleSearch = (query) => {
+    props.setSearch(query);
+  };
   if (!movie) return <p className="err">Loading...</p>;
 
   return (
+    <>
+     <Banner setSearch={handleSearch} />
     <div className="moviepage">
       <div className="infodisplay">
         <div className="section1">
@@ -65,7 +70,9 @@ const Information = (props) => {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+    </>
+
   );
 };
 

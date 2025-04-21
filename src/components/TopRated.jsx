@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Banner from './Banner';
+import Page from './Page';
 
 
 
@@ -21,10 +23,14 @@ function TopRated(props) {
   const handleClick = (movie) => {
     props.setMovie(movie);
 };
- 
+   const handleSearch = (query) => {
+    props.setSearch(query); 
+  };
 
   return (
     <>
+      <Banner setSearch={handleSearch} />
+      
     <div className="square">
       {movies.map((movie) => (
         <div className="grid" key={movie.id}>
@@ -36,12 +42,7 @@ function TopRated(props) {
         </div>
       ))}
     </div>
-
-    <div className="Nextpage">
-<button disabled={page === 1} onClick={() => setPage((p) => p - 1)}>  Prev  </button>
-<span>Section {page}</span>
-<button onClick={() => setPage((p) => p + 1)}>  Next  </button>
-</div>
+       <Page currentPage={page} onPageChange={setPage} />
     </>
   );
 };
